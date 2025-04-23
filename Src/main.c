@@ -27,14 +27,15 @@ void delay() {
 
 void init_LED() {
     // enable clock for peripheral component GPIOB
-    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;     // *(uint32_t *)0x4002104c |= 1 << 1;
-    (void)RCC->AHB2ENR; // read-back clock 
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;
+    (void)RCC->AHB2ENR; // read-back, make sure the clock is enabled 
 
-    // set pin to output mode (1). Reset defaults for other registers are okay here
-    GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODE3_Msk) | (1 << GPIO_MODER_MODE3_Pos);    // 0x48000400  Msk: 3<<6 1<<6
+    // set pin PB3 to output mode (1).
+    GPIOB->MODER &=~ GPIO_MODER_MODE3;  // clear PB3 mode bits
+    GPIOB->MODER |= GPIO_MODER_MODE3_0; // set PB3 to output mode
+    // otherwise, GPIO default settings are okay
 }
 
-// ODR 0x48000414
 
 int main(void) {
 
@@ -42,9 +43,9 @@ int main(void) {
 
     /* Loop forever */
 	for(;;) {
-        GPIOB->BSRR = 1 << 3;
+        GPIOB->BSRR = GPIO_BSRR_BS3;
         delay();
-        GPIOB->BRR = 1 << 3;
+        GPIOB->BRR = GPIO_BRR_BR3;
         delay();
     }
 }
