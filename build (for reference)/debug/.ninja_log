@@ -1,6 +1,0 @@
-# ninja log v5
-7	48	7538044204605933	CMakeFiles/blinky_bare_metal.dir/Startup/startup_stm32l432kcux.s.obj	77a3a6f0db6669f8
-5	55	7538044204721016	CMakeFiles/blinky_bare_metal.dir/Src/sysmem.c.obj	cae599be17ea0517
-4	79	7538044204891239	CMakeFiles/blinky_bare_metal.dir/Src/syscall.c.obj	9a178d547b1f0767
-2	136	7538044205535962	CMakeFiles/blinky_bare_metal.dir/Src/main.c.obj	3dc9bc60e2ea40fa
-137	227	7538044206024417	blinky_bare_metal.elf	47ed492b5e7fa13e

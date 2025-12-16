@@ -1,3 +1,0 @@
-C:/Users/frank/OneDrive/Lehre/RO MPT ES/RO/blinky_CMSIS_C/build/debug/CMakeFiles/blinky_bare_metal.dir
-C:/Users/frank/OneDrive/Lehre/RO MPT ES/RO/blinky_CMSIS_C/build/debug/CMakeFiles/edit_cache.dir
-C:/Users/frank/OneDrive/Lehre/RO MPT ES/RO/blinky_CMSIS_C/build/debug/CMakeFiles/rebuild_cache.dir
